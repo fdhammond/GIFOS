@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+        <link rel="stylesheet" href="css/style.css" id="mode-style">    
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/style.css" id="mode-style">
+
+    <title>GIFOS</title>
+</head>
+
+<body>
+
+    <header class="header">
+        <a class="header__logo" href="index.html">
+            <img src="./assets/logo-desktop.svg" alt="Logo" id="headerLogo"/>            
+        </a>
+        <nav class="header__menu">
+            <ul>
+                <li><a id="change-mode" href="#">modo nocturno</a><span></span></li>
+                <li><a id="favorites" href="favoritos.html">favoritos</a><span></span></li>
+                <li><a id="my-gifs" href="mis-gifos.html">mis gifos</a><span></span></li>
+            </ul>
+        </nav>
+        <div class="header__add" id="selected">
+            <a class="createGifoLink"><i id="icon" class="fas fa-plus"></i></a>
+            <i id="icon" class="fas fa-bars hidden"></i>
+        </div>
+    </header>
+
+    <body>
+        <div class="dark-background">
+        <div class="main-container-create">            
+            <img class="camara" src="./assets/camara.svg" alt="" srcset="">
+            <img class="camaraNocturna hidden" src="./assets/camara-modo-noc.svg" alt="" srcset="">                
+            <img src="./assets/element-luz-camara.svg" alt="" srcset="">            
+            <div class="rectangle">
+                <div class="rectangle-text">                        
+                        <video class="video" id="hide"></video>    
+                    <div class="uploading-gifo"> 
+                        <div class="container-preview hidden">                                               
+                            <div class="gifoMask">                                                          
+                                <img class="video-preview" id="preview"/>                   
+                            </div>
+                            
+                            <div class="video-upload-message hidden" id="upload-message">                                
+                                    <img src="./assets/loader.svg" alt="" id="uploadingIcon">
+                                    <h2 id="uploadingGifo">Estamos subiendo tu GUIFO</h2>
+                                    <img src="./assets/ok.svg" alt="" class="hidden" id="imageUploaded">
+                                    <h2 class="hidden" id="exito">GIFO subido con exito</h2>
+                                </div>                
+                        </div> 
+                            
+                    </div>
+                    <div class="main-create-text">
+                        <h2>Aquí podrás <br> crear tus propios <span>GIFOS</span></h2>
+                        <p>¡Crea tu GIFO en sólo 3 pasos! <br>(sólo necesitas una cámara para grabar un video)</p>
+                    </div>
+                    <div class="access" id="hide">
+                        <h2>¿Nos das acceso 
+                            a tu cámara?</h2>
+                        <p>El acceso a tu camara será válido sólo <br>
+                            por el tiempo en el que estés creando el GIFO.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-timer">
+            <div class="numbers">
+                <div class="number-one selected-number" id="number">1</div>
+                <div class="number-two" id="number">2</div>
+                <div class="number-three" id="number">3</div>
+            </div>
+                       
+            <div class="repetir-captura" id="hide">
+                <h3>REPETIR CAPTURA</h3>
+            </div>
+            <div class="timer">                
+            </div>
+        </div>
+        <div class="underline-timer">
+            <div class="line" id="line"></div>
+        </div>
+        <div class="button-start">            
+            <button class="comenzar buttonStyle">COMENZAR</button>
+            <button class="grabar buttonStyle" id="hide">GRABAR</button>
+            <button class="finalizar buttonStyle" id="hide">FINALIZAR</button>
+            <button class="subirGifo buttonStyle" id="hide">SUBIR GIFO</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer">
+
+            <div class="footer-icons">
+                <p>Compartir en:</p>
+                <div class="icons">
+                    <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"
+                            aria-hidden="true"></i></a>
+                    <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                    <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"
+                            aria-hidden="true"></i></a>
+                </div>
+                    </div>
+                <div class="footer-rights">
+                    <p>© GIFOS 2020 All Rights Reserved.</p>
+                </div>   
+                <div class="border-line"></div>         
+        </div>
+    </footer>
+</div>
+           
+        <script src="js/nav.js"></script>     
+        <script src="js/crearGifo.js"></script>   
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/RecordRTC/5.5.8/RecordRTC.js" type="text/javascript"></script>
+
+    </body>
+
+</html>

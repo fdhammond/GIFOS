@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+        <link rel="stylesheet" href="css/style.css" id="mode-style">    
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/style.css" id="mode-style">
+    <title>GIFOS</title>
+</head>
+
+<body>
+
+    <header class="header">
+        <a class="header__logo" href="index.html">
+            <img src="./assets/logo-desktop.svg" alt="Logo" id="headerLogo"/>            
+        </a>
+        <nav class="header__menu">
+            <ul>
+                <li><a id="change-mode" href="#">modo nocturno</a><span></span></li>
+                <li><a id="favorites" href="favoritos.html">favoritos</a><span></span></li>
+                <li><a id="my-gifs" href="mis-gifos.html">mis gifos</a><span></span></li>
+            </ul>
+        </nav>
+        <div class="header__add">             
+                <a class="createGifoLink"><i id="icon" class="fas fa-plus"></i></a>
+                <i id="icon" class="fas fa-bars hidden"></i>         
+        </div>
+    </header>
+
+    <section>
+        
+        <div class="main-title">
+            <h1>Inspírate, busca, guarda y crea <br> los mejores <span>GIFOS</span></h1>
+        </div>
+        <div class="main-image">
+            <img src="assets/ilustra_header.svg" alt="ilustration">
+        </div>
+
+        <div class="search">
+            <div class="container-search hidden-search" id="container-search">
+                <img class="button-search hidden" id="button-search-grey" src="./assets/icon-search.svg" alt="">
+                <input class="input-search" id="input-search" type="text" placeholder="Busca GIFOS y más">
+                <img class="icon-search" id="icon-search" src="assets/icon-search.svg" alt="">
+                <img class="icon-close-search hidden" id="icon-close-search" src="assets/close.svg" alt="">
+            </div>
+        </div>
+
+        <section class="image-search hidden" id="search-result">
+            <hr class="search-line">
+            <h3 class="results-title"></h3>
+            <div class="search-error" id="search-error"></div>
+
+            <div class="show-search-result" id="show-search-result">
+
+            </div>
+
+            <a href="" class="view-more hidden" id="view-more">VER MÁS</a>
+        </section>
+
+        <div class="searchSuggestions hidden" id="searchSuggestions">
+            
+            <hr class="suggestions-line">
+            <ul class="searchSuggestions-list" id="searchSuggestions-list">
+         
+            </ul>
+        </div>
+
+        <div class="hidden" id="maximizedGifSection">
+
+        </div>
+
+        <div class="sub-text-title">
+            <h3>Trending:</h3>
+        </div>
+        <div class="sub-text-paragraph">
+            <p class="trending-gifos-text"></p>
+        </div>
+    </section>
+
+
+    <main>
+        <div class="trending-gifos">
+            <div class="trending-title">
+                <h2>Trending GIFOS</h2>
+            </div>
+            <div class="trending-paragraph">
+                <p>Mira los últimos GIFO de nuestra comunidad</p>
+            </div>
+
+            <div class="trending-gallery">
+                <div class="arrow-container">
+                    <img src="./assets/button-slider-left.svg" class="arrow-left" id="arrow">
+
+                </div>
+                <div class="image-container-general">
+                    <div class="image-container">
+
+                    </div>
+                </div>
+                <div class="arrow-container">
+                    <img src="./assets/button-slider-right.svg" class="arrow-right" id="arrow">
+                </div>
+            </div>
+
+    </main>
+
+    <footer>
+        <div class="footer">
+
+            <div class="footer-icons">
+                <p>Compartir en:</p>
+                <div class="icons">
+                    <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"
+                            aria-hidden="true"></i></a>
+                    <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                    <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"
+                            aria-hidden="true"></i></a>
+                </div>
+                    </div>
+                <div class="footer-rights">
+                    <p>© GIFOS 2020 All Rights Reserved.</p>
+                </div>   
+                <div class="border-line"></div>         
+        </div>
+    </footer>
+    
+    <script src="js/nav.js"></script>
+    <script src="js/search-trending.js"></script>
+
+
+</body>
+
+</html>

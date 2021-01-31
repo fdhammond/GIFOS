@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+        <link rel="stylesheet" href="css/style.css" id="mode-style">
+    
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/style.css" id="mode-style">
+    
+        <title>GIFOS</title>
+    </head>
+
+<body>
+
+    <header class="header">
+        <a class="header__logo" href="index.html">
+            <img src="./assets/logo-desktop.svg" alt="Logo" id="headerLogo"/>            
+        </a>
+        <nav class="header__menu">
+            <ul>
+                <li><a id="change-mode" href="#">modo nocturno</a><span></span></li>
+                <li><a id="favorites" href="favoritos.html">favoritos</a><span></span></li>
+                <li><a id="selected" href="mis-gifos.html">mis gifos</a><span></span></li>
+            </ul>
+        </nav>
+        <div class="header__add">
+            <a class="createGifoLink"><i id="icon" class="fas fa-plus"></i></a>
+            <i id="icon" class="fas fa-bars hidden"></i>
+        </div>
+    </header>
+
+    <main>
+        
+        <div class="mis-gifos-main">
+            <div class="mis-gifos-img">
+                <img src="assets/icon-mis-gifos.svg" alt="">
+            </div>            
+        </div>
+     
+        
+    <section id="noFavorites-section">
+
+        <img src="./assets/icon-mis-gifos.svg" alt="Favorites Icon" id="img-myGifos">
+        <h2 class="title">Mis GIFOS</h2>
+
+        <section class="noFavorites-container" id="noFavorites-container">
+            <img class="no-image" src="assets/icon-mis-gifos-sin-contenido.svg" alt="Decorative Img">
+            <h3 class="no-text">¡Animate a crear tu primer GIFO!</h3>
+        </section>
+
+        <section id="favorites-section">
+            <div class="comenzar repetir-captura hidden"></div>
+            <div class="image-search" id="search-result">
+                <div class="show-search-result favorites" id="misgifos-container">
+    <!-- INYECTO EL ARRAY DEL LS -->
+                </div>
+            </div>
+        </section>
+
+    </section>
+
+    <div class="hidden" id="maximizedGifSection">
+
+    </div>
+
+
+    <main>
+        <div class="trending-gifos">
+            <div class="trending-title">
+                <h2>Trending GIFOS</h2>
+            </div>
+            <div class="trending-paragraph">
+                <p>Mira los últimos GIFO de nuestra comunidad</p>
+            </div>
+
+            <div class="trending-gallery">
+                <div class="arrow-container">
+                    <img src="./assets/button-slider-left.svg" class="arrow-left" id="arrow">
+
+                </div>
+                <div class="image-container-general">
+                    <div class="image-container">
+
+                    </div>
+                </div>
+                <div class="arrow-container">
+                    <img src="./assets/button-slider-right.svg" class="arrow-right" id="arrow">
+                </div>
+            </div>
+
+    </main>
+
+    <footer>
+        <div class="footer">            
+            <div class="footer-icons">
+                <p>Compartir en:</p>
+                <div class="icons">
+                    <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"
+                            aria-hidden="true"></i></a>
+                    <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                    <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"
+                            aria-hidden="true"></i></a>
+                </div>
+                    </div>
+                <div class="footer-rights">
+                    <p>© GIFOS 2020 All Rights Reserved.</p>
+                </div>   
+                <div class="border-line"></div>         
+        </div>
+    </footer>
+    </main>
+    
+    <script src="js/nav.js"></script>
+    <script src="js/misGifos.js"></script>
+    <script src="js/crearGifo.js"></script>
+  
+</body>
+
+</html>
