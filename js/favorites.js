@@ -286,11 +286,7 @@ const addFavorites = (gif, username, title, id) => {
 // Download Gifo
 
 const downloadGif = async (url) => {
-    //Using blob to trigger the download
-    /*
-    let blob = await fetch(url).then((img) => img.blob());
-    saveAs(blob, title + '.gif');
-    */
+
    const blob = (await fetch(url)).blob();
    const urlGif = URL.createObjectURL(await blob);
    const anker = document.createElement('a');

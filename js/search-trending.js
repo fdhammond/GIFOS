@@ -409,7 +409,7 @@ const addFavorites = (gif, username, title, id) => {
     favoritesArray.push(newObjGif);
     //LocalStorage to data
     localStorage.setItem('FavoriteGifos', JSON.stringify(favoritesArray));
-    //showFavoriteGifos();
+    
 }
 
 

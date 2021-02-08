@@ -20,10 +20,8 @@ let myGifosArray = [];
 let falsy = true;
 
 
-// // definimos el objeto recorder - tiene que se global para que podamos accederlo en todos los listeners
 let recorder;
 
-// // También una variable recording para manejar el timer
 let recording = false;
 
 
@@ -48,10 +46,6 @@ let recording = false;
   }
 
 
-  
-
-
-
 const mode = document.getElementById("change-mode");
 mode.addEventListener('click', () => {
   location.reload();
@@ -71,18 +65,13 @@ mode.addEventListener('click', () => {
 
 
 
-
-
-
-// Obtener video y grabación
-
 function getStreamAndRecord () {
   
   if (!navigator.getUserMedia) {
     navigator.getUserMedia = navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
   }
 
-   // empieza a correr la cámara
+   
    navigator.mediaDevices.getUserMedia({
      audio: false,
      video: true
@@ -91,7 +80,7 @@ function getStreamAndRecord () {
 
     video.removeAttribute('id');
     accessText.setAttribute('id', 'hide'); 
-     // Usamos el stream de la cámara como source de nuestra tag <video> en el html
+     
      video.srcObject = stream;
      video.play()
       
@@ -114,12 +103,12 @@ function getStreamAndRecord () {
        recorder.startRecording();
        getDuration();
      
-       // modificamos el dom para que se note que estamos grabando
+       
        
        record.innerHTML = 'FINALIZAR'
        
 
-       // cortamos el stream de la cámara
+       
        recorder.camera = stream; 
 
    } else {
@@ -138,8 +127,6 @@ function stopRecordingCallback() {
 
   recorder.camera.stop();
 
-  // le damos el formato requerido a la data que vamos a enviar como body de nuestro 
-  // POST request
   let form = new FormData();
   form.append("file", recorder.getBlob(), 'test.gif');
   
@@ -152,7 +139,6 @@ function stopRecordingCallback() {
   objectURL = URL.createObjectURL(recorder.getBlob());
   preview.src = objectURL;
 
-  // modificamos el dom para mostrar la preview, remover el timer
   preview.classList.remove('hidden')
   video.classList.add('hidden')
   record.setAttribute('id', 'hide'); 
@@ -199,8 +185,7 @@ function getDuration() {
 
 function uploadGif(gif) {
   let api_key = "pdgPfpMIBejBL2VCIMm1u95FafUZoCMm";
-  // formateamos el post según las necesidades particulares de la api de giphy
-  // la api key se manda en la url
+
   fetch('https://upload.giphy.com/v1/gifs' + '?api_key=' + api_key, {
     method: 'POST', // or 'PUT'
     body: gif,
@@ -217,8 +202,7 @@ function uploadGif(gif) {
       document.querySelector('#imageUploaded').classList.remove('hidden');
       document.querySelector('#exito').classList.remove('hidden');
       document.querySelector('.container-preview').classList.remove('hidden');      
-      downloadMyGifo();
-      // gifoLink();      
+      downloadMyGifo();      
     }
     return res.json();  
   }).then(data => {  
@@ -361,7 +345,6 @@ const downloadMyGifo = () => {
       `;
       document.querySelector('.gifoMask').innerHTML += template;  
       document.querySelector('#downloadButton').addEventListener('click', downloadGif);
-      // gifoLink();         
 
        
 }
@@ -370,9 +353,6 @@ const gifoLink = (url) => {
   let myGifos = JSON.parse(localStorage.getItem('myGifoUrl'));
   document.execCommand("copy");
 }
-
-
-
 
 
 });
