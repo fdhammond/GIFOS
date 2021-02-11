@@ -389,6 +389,41 @@ main {
 				opacity: 100;
       }
 
+      .gif-buttons-icons-myGifos {
+        justify-content: flex-end;
+        position: relative;
+        .button {
+          position: absolute;
+          color: #572EE5;
+          width: 2rem;
+          height: 2rem;             
+          cursor: pointer;
+        }
+        
+        #downloadButton {
+          margin-top: -66%;
+          margin-left: 80%;
+        }
+        #shareButton {
+          margin-top: -66%;
+          margin-left: 90%;
+        }
+        .download {
+          background: url('../assets/icon-download.svg') center no-repeat;
+        
+          &:hover {
+            background: url('../assets/icon-download-hover.svg') center
+              no-repeat;
+          }
+        }
+        .icon-link {
+          background: url('../assets/icon-link-normal.svg');
+          &:hover {
+            background: url('../assets/icon-link-hover.svg');
+          }
+        }
+        }
+
       .gif-buttons-icons {
         width: 8rem;
 			padding: 4%;
@@ -483,9 +518,9 @@ main {
 
 
 footer {
-  background-color: $background-dark;
+    background-color: $background-dark;
   .footer { 
-  margin-top: 7%;
+  
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -530,11 +565,6 @@ footer {
       
     }
   }
-}
-
-#footerMyGifos {
-  display: flex;
-  margin-top: 10%;
 }
 
 //Favoritos
@@ -745,7 +775,7 @@ main {
   
   position: relative;
   z-index: 1;
-  margin-top: 3% !important;
+  margin-top: 4% !important;
   padding-top: 5%;  
   margin-left: -10%;
   display: flex;
@@ -805,9 +835,10 @@ main {
 .container-timer {
   .numbers {
     display: flex;
-    justify-content: center;        
+    justify-content: center;  
+    background-color: $background-dark-full;    
+    color: white;      
     #number {     
-      background-color: white; 
       display: flex;
       justify-content: center;
       align-items: center;
@@ -816,11 +847,12 @@ main {
       width: 32px;      
       border-radius: 50%;
       margin: 25px 25px;    
+      border-color: white !important;
     }            
   }
   .selected-number {
-    background-color: #572EE5 !important;
-    color: white;
+    background-color: white !important;
+    color: black;
 } 
   .timer {
     margin-top: -45px;
@@ -878,16 +910,20 @@ text-align: center;
   justify-content:center;
   align-content: center;
   margin-top: 20px;
+  padding-bottom: 180px;
   button {
     font-family: $font-montserrat;
-    font-weight: $main-font-bold;   
+    font-weight: $main-font-bold;
+   border: 1px solid #572EE5;
    border-radius: 25px;
    border-radius: 25px;
    height: 50px;
    line-height: 50px;
+   color: white !important;
    width: 127px;
-   font-size: 13px;   
-   border: solid #572EE5 1px;
+   font-size: 13px;
+   background-color: $background-dark-full;
+   border: solid white 1px !important;
    text-decoration: none;
    display: inline-block;
    cursor: pointer;
@@ -895,14 +931,12 @@ text-align: center;
    font-size: 13px;
     letter-spacing: 0;
     text-align: center;
-  background-color: $background-dark-full;
-  color: white !important;
+
     &:hover {
-      background-color: #572EE5 !important;
+      background-color: $main-color-violet;
       color: white;
     }
   }
-  
 }
 
 #hide {
@@ -1181,14 +1215,9 @@ footer {
     }
   }
 }
-#footerMyGifos {
-  display: flex;
-  margin-top: 5.8%;
-}
 
 .dark-background {
   background-color: $background-dark-full;
-  padding-bottom: 56px;
 }
   
 

@@ -407,6 +407,47 @@ main .trending-gifos .trending-gallery .image-container-general .image-container
   opacity: 100;
 }
 
+main .trending-gifos .trending-gallery .image-container-general .image-container .general-container .gif-buttons .gif-buttons-icons-myGifos {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  position: relative;
+}
+
+main .trending-gifos .trending-gallery .image-container-general .image-container .general-container .gif-buttons .gif-buttons-icons-myGifos .button {
+  position: absolute;
+  color: #572EE5;
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+}
+
+main .trending-gifos .trending-gallery .image-container-general .image-container .general-container .gif-buttons .gif-buttons-icons-myGifos #downloadButton {
+  margin-top: -66%;
+  margin-left: 80%;
+}
+
+main .trending-gifos .trending-gallery .image-container-general .image-container .general-container .gif-buttons .gif-buttons-icons-myGifos #shareButton {
+  margin-top: -66%;
+  margin-left: 90%;
+}
+
+main .trending-gifos .trending-gallery .image-container-general .image-container .general-container .gif-buttons .gif-buttons-icons-myGifos .download {
+  background: url("../assets/icon-download.svg") center no-repeat;
+}
+
+main .trending-gifos .trending-gallery .image-container-general .image-container .general-container .gif-buttons .gif-buttons-icons-myGifos .download:hover {
+  background: url("../assets/icon-download-hover.svg") center no-repeat;
+}
+
+main .trending-gifos .trending-gallery .image-container-general .image-container .general-container .gif-buttons .gif-buttons-icons-myGifos .icon-link {
+  background: url("../assets/icon-link-normal.svg");
+}
+
+main .trending-gifos .trending-gallery .image-container-general .image-container .general-container .gif-buttons .gif-buttons-icons-myGifos .icon-link:hover {
+  background: url("../assets/icon-link-hover.svg");
+}
+
 main .trending-gifos .trending-gallery .image-container-general .image-container .general-container .gif-buttons .gif-buttons-icons {
   width: 8rem;
   padding: 4%;
@@ -505,7 +546,6 @@ footer {
 }
 
 footer .footer {
-  margin-top: 7%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -558,13 +598,6 @@ footer .footer .footer-rights p {
   color: #fff;
   letter-spacing: 0;
   margin-right: 100px;
-}
-
-#footerMyGifos {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 10%;
 }
 
 #noFavorites-section {
@@ -830,7 +863,7 @@ main .mis-gifos-button-more button {
 .main-container-create {
   position: relative;
   z-index: 1;
-  margin-top: 3% !important;
+  margin-top: 4% !important;
   padding-top: 5%;
   margin-left: -10%;
   display: -webkit-box;
@@ -902,10 +935,11 @@ main .mis-gifos-button-more button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background-color: #222326 !important;
+  color: white;
 }
 
 .container-timer .numbers #number {
-  background-color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -921,11 +955,12 @@ main .mis-gifos-button-more button {
   width: 32px;
   border-radius: 50%;
   margin: 25px 25px;
+  border-color: white !important;
 }
 
 .container-timer .selected-number {
-  background-color: #572EE5 !important;
-  color: white;
+  background-color: white !important;
+  color: black;
 }
 
 .container-timer .timer {
@@ -1009,18 +1044,22 @@ main .mis-gifos-button-more button {
   -ms-flex-line-pack: center;
       align-content: center;
   margin-top: 20px;
+  padding-bottom: 180px;
 }
 
 .button-start button {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
+  border: 1px solid #572EE5;
   border-radius: 25px;
   border-radius: 25px;
   height: 50px;
   line-height: 50px;
+  color: white !important;
   width: 127px;
   font-size: 13px;
-  border: solid #572EE5 1px;
+  background-color: #222326 !important;
+  border: solid white 1px !important;
   text-decoration: none;
   display: inline-block;
   cursor: pointer;
@@ -1028,12 +1067,10 @@ main .mis-gifos-button-more button {
   font-size: 13px;
   letter-spacing: 0;
   text-align: center;
-  background-color: #222326 !important;
-  color: white !important;
 }
 
 .button-start button:hover {
-  background-color: #572EE5 !important;
+  background-color: #FFF !important;
   color: white;
 }
 
@@ -1317,15 +1354,7 @@ footer {
   }
 }
 
-#footerMyGifos {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 5.8%;
-}
-
 .dark-background {
   background-color: #222326 !important;
-  padding-bottom: 56px;
 }
 /*# sourceMappingURL=night-mode.css.map */

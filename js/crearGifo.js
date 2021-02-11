@@ -193,8 +193,7 @@ function uploadGif(gif) {
     console.log(res.status)
     if (res.status != 200 ) {
       uploadMessage.innerHTML = `<h3>Hubo un error subiendo tu Guifo</h3>`
-    } else {
-      debugger;
+    } else {    
       let myGifos = JSON.parse(localStorage.getItem('myGifoUrl'));
       console.log('GIFO SUBIDO')
       document.querySelector('#uploadingIcon').classList.add('hidden');
@@ -331,28 +330,43 @@ const downloadGif = async (url) => {
   document.body.removeChild(anker);
  }
 
-const downloadMyGifo = () => {
+// const gifoLink = async (url) => {
+//   debugger;  
+//     let urlCopy = document.createElement('input');  
+//     urlCopy.value = url;    
+//     console.log(urlCopy.value)
+//     document.body.appendChild(urlCopy);
+//     urlCopy.select();
+//     document.execCommand("copy");
+//     document.body.removeChild(urlCopy);
+// }
 
+const downloadMyGifo = () => {
   let myGifosLS = JSON.parse(localStorage.getItem('myGifoUrl'));
 
-  let myGifos = myGifosLS.url;    
+  let myGifos = myGifosLS[myGifosLS.length - 1].url;    
       let template = `
       <div class="gif-buttons-icons-myGifos">                                          
       <div class="button download" id="downloadButton"></div>
-      <div class="button icon-link" id="shareButton" onclick="gifoLink()"></div>      
+      <div class="button icon-link" id="shareButton"></div>      
       <img class="video-preview" id="preview"/>   
       </div>
       `;
       document.querySelector('.gifoMask').innerHTML += template;  
       document.querySelector('#downloadButton').addEventListener('click', downloadGif);
-
+      document.querySelector('#shareButton').addEventListener('click', () => {
+    let urlCopy = document.createElement('input');  
+    urlCopy.value = myGifos;    
+    console.log(urlCopy.value)
+    document.body.appendChild(urlCopy);
+    urlCopy.select();
+    document.execCommand("copy");
+    document.body.removeChild(urlCopy);
+      });
        
 }
 
-const gifoLink = (url) => {
-  let myGifos = JSON.parse(localStorage.getItem('myGifoUrl'));
-  document.execCommand("copy");
-}
+
 
 
 });

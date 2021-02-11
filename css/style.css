@@ -746,7 +746,7 @@ footer .footer .footer-icons {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-left: 5%;
+  margin-left: 100px;
 }
 
 footer .footer .footer-icons p {
@@ -774,14 +774,14 @@ footer .footer .footer-rights {
   font-size: 13px;
   color: black;
   letter-spacing: 0;
-  margin-right: -55%;
+  margin-right: 100px;
 }
 
 #footerMyGifos {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 10%;
+  margin-top: 4.8%;
 }
 
 #favorites-section {
@@ -1475,71 +1475,6 @@ main .mis-gifos-button-more button {
   }
   section .img-search img {
     margin-left: -54px;
-  }
-  footer {
-    padding-bottom: 25px;
-  }
-  footer .footer {
-    border: none;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -ms-flex-line-pack: center;
-        align-content: center;
-    margin-bottom: 0;
-    padding-bottom: 0;
-  }
-  footer .footer .footer-icons {
-    margin-left: 6%;
-    margin-top: -25px;
-  }
-  footer .footer .footer-icons p {
-    margin-top: 45px;
-  }
-  footer .footer .footer-icons .icons {
-    margin-left: -50%;
-    margin-top: 65px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -ms-flex-line-pack: center;
-        align-content: center;
-  }
-  footer .footer .footer-icons .icons a {
-    margin-top: 45px;
-  }
-  footer .footer .footer-rights p {
-    margin-left: -135%;
-    margin-top: 15px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -ms-flex-line-pack: center;
-        align-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin-bottom: 25px;
-  }
-  footer .footer .border-line {
-    width: 100%;
-    border: 2px solid #572EE5;
   }
 }
 /*# sourceMappingURL=style.css.map */
