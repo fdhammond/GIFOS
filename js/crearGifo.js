@@ -102,13 +102,7 @@ function getStreamAndRecord () {
        
        recorder.startRecording();
        getDuration();
-     
-       
-       
        record.innerHTML = 'FINALIZAR'
-       
-
-       
        recorder.camera = stream; 
 
    } else {
