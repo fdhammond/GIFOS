@@ -777,6 +777,11 @@ footer .footer .footer-rights {
   background: url("../assets/icon-trash-hover.svg") center no-repeat;
 }
 
+.back-night {
+  position: relative;
+  background-color: #222326 !important;
+}
+
 main {
   background-color: #37383C !important;
 }
@@ -874,7 +879,7 @@ main .mis-gifos-button-more button {
 .main-container-create .rectangle {
   width: 688px;
   height: 390px;
-  border: 1px solid #222326 !important;
+  border: 1px solid #FFF !important;
 }
 
 .main-container-create .rectangle .rectangle-text video {
@@ -949,7 +954,8 @@ main .mis-gifos-button-more button {
   width: 32px;
   border-radius: 50%;
   margin: 25px 25px;
-  border-color: #222326 !important;
+  border-color: #9CAFC3 !important;
+  color: white;
 }
 
 .container-timer .numbers #number:hover {
@@ -957,7 +963,8 @@ main .mis-gifos-button-more button {
 }
 
 .container-timer .selected-number {
-  background-color: #222326 !important;
+  z-index: 400;
+  background-color: #9CAFC3 !important;
   color: white;
 }
 
@@ -1026,10 +1033,10 @@ main .mis-gifos-button-more button {
 
 .underline-timer .line {
   margin-top: -45px;
-  border: 2px solid #222326 !important;
+  border: 2px solid #FFF !important;
   width: 850px;
   height: 10px;
-  background-color: #222326 !important;
+  background-color: #FFF !important;
 }
 
 .button-start {
