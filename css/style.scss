@@ -697,7 +697,6 @@ color: #fff;
 
 footer {
   .footer { 
-  
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -708,7 +707,7 @@ footer {
     display: flex;   
     justify-content:center;
     align-items: center;
-    margin-left: 100px;
+    margin-left: 5%;
     p {
       font-family: $font-roboto;
       font-size: 13px;
@@ -736,14 +735,14 @@ footer {
       font-size: 13px;
       color: black;
       letter-spacing: 0;   
-      margin-right: 100px;
+      margin-right: -55%;
     }
   }
 }
 
 #footerMyGifos {
   display: flex;
-  margin-top: 4.8%;
+  margin-top: 10%;
 }
 
 //Favoritos
@@ -1297,58 +1296,118 @@ position: relative;
 @media screen and (max-width: 550px) { 
 
 
-section {
-    .main-title {
-      h1 {
-        margin-top: 76px;
-        font-family: $font-montserrat;
-        font-size: 25px;
-        color: $main-color-violet;
-        text-align: center;
-        line-height: 33px;
+  section {
+      .main-title {
+        h1 {
+          margin-top: 76px;
+          font-family: $font-montserrat;
+          font-size: 25px;
+          color: $main-color-violet;
+          text-align: center;
+          line-height: 33px;
+        }
+        span {
+          color: $main-color-green;
+          font-family: $font-montserrat;
+          font-size: 35px;      
+          text-align: center;
+          line-height: 50px;
+        }
       }
-      span {
-        color: $main-color-green;
-        font-family: $font-montserrat;
-        font-size: 35px;      
-        text-align: center;
-        line-height: 50px;
+    
+      .main-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 24px;
+        img {
+          max-width: 273px;
+          height: 130px;
+        }
       }
-    }
-  
-    .main-image {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-top: 24px;
-      img {
-        max-width: 273px;
-        height: 130px;
+    
+      .img-search {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        
+        #search {
+          background: #ffffff;
+          border: 1px solid $main-color-violet;
+          width: 334px;
+          height: 50px;
+          border-radius: 27px;  
+          font-family: $font-roboto;
+          font-size: 16px;
+          color: black;   
+          padding-left: 54px;   
+        }
+        img {
+          margin-left: -54px;
+        }
       }
-    }
-  
-    .img-search {
-      display: flex;
-      justify-content: center;
-      align-content: center;
-      
-      #search {
-        background: #ffffff;
-        border: 1px solid $main-color-violet;
-        width: 334px;
-        height: 50px;
-        border-radius: 27px;  
-        font-family: $font-roboto;
-        font-size: 16px;
-        color: black;   
-        padding-left: 54px;   
-      }
+  }
+
+  .trending-gallery {
+   
+    scroll-behavior: smooth;
+    .arrow-container {
       img {
-        margin-left: -54px;
+        display: none;
+        -webkit-overflow-scrolling: touch;
       }
     }
-}
-}
+    }
+  }
+  
+  footer {
+    padding-bottom: 25px;
+   
+    .footer {
+        border: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        margin-bottom: 0;
+        padding-bottom: 0;
+      .footer-icons {
+        margin-left: 6%;
+        margin-top: -25px;
+        p {
+          margin-top: 45px;
+        }
+        .icons {
+          margin-left: -50%;
+          margin-top: 65px;
+          display: flex;
+          justify-content: center;
+          align-content: center;
+          a {
+            margin-top: 45px;
+          }
+        }
+      }
+      .footer-rights {
+        p {
+          margin-left: -135%;
+          margin-top: 15px;
+          display: flex;
+          justify-content: center;
+          align-content: center;
+          align-items: center;
+          margin-bottom: 25px;
+        }
+      }
+      .border-line {
+        width: 100%;
+        border: 2px solid $main-color-violet;
+      }
+    }
+  
+  }
+  }
 
   
 

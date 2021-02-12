@@ -17,7 +17,7 @@ const uploadMessage = document.getElementById('upload-message');
 const preview = document.getElementById('preview');
 let favoritesArray = [];
 let myGifosArray = [];
-let falsy = true;
+
 
 
 let recorder;
@@ -221,9 +221,7 @@ function getGifDetails (id) {
       .then((response) => {
          return response.json()
       }).then(data => {
-        /*
-          Crear array en LS llamado mis GIFOS, hacer push al container en MIS GIFOS.
-*/  
+
     const gifUrl = data.data.images.original.url;
     const gifUser = data.data.username;
     let arrayTemporal = JSON.parse(localStorage.getItem('myGifoUrl'));
@@ -330,16 +328,7 @@ const downloadGif = async (url) => {
   document.body.removeChild(anker);
  }
 
-// const gifoLink = async (url) => {
-//   debugger;  
-//     let urlCopy = document.createElement('input');  
-//     urlCopy.value = url;    
-//     console.log(urlCopy.value)
-//     document.body.appendChild(urlCopy);
-//     urlCopy.select();
-//     document.execCommand("copy");
-//     document.body.removeChild(urlCopy);
-// }
+
 
 const downloadMyGifo = () => {
   let myGifosLS = JSON.parse(localStorage.getItem('myGifoUrl'));
@@ -365,9 +354,6 @@ const downloadMyGifo = () => {
       });
        
 }
-
-
-
 
 });
 

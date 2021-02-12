@@ -8,9 +8,6 @@ let camara = document.querySelector('.camara');
 let camaraNocturna = document.querySelector('.camaraNocturna');
 
 
-
-
-
 document.addEventListener("DOMContentLoaded", function (event) {
     if (
         JSON.parse(localStorage.getItem("myGifoUrl")) === null ||
@@ -22,7 +19,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
          
 });
 
-
 const appearFavoriteGifos = () => {
     if (favoritesArray == 0 || favoritesArray == null) {
         noFavoritesSection.classList.remove('hidden');
@@ -33,9 +29,6 @@ const appearFavoriteGifos = () => {
     }
 }
 
-
-
-  
 
 /* ++++++++++++++++++++++++++    Trendings    ++++++++++++++++++++++++++ */
 
@@ -145,7 +138,7 @@ const addFavorites = (gif, username, title, id) => {
     favoritesArray.push(newObjGif);
     //LocalStorage to data
     localStorage.setItem('FavoriteGifos', JSON.stringify(favoritesArray));
-    //showFavoriteGifos();
+
 }
 
 

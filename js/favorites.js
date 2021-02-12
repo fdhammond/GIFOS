@@ -166,8 +166,7 @@ arrowLeft.addEventListener('click', arrowLeftFunction);
 //Remove Gif from favorites
 
 const removeGif = (gif, event) => {
-    debugger;
-   
+    
     let containerFavorite = document.querySelector('#favorite-container');
     
     //Parse first the info, array

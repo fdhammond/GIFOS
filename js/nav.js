@@ -11,7 +11,7 @@ const css = document.getElementById("mode-style");
 window.document.addEventListener("scroll", eventScroll);
 device.addEventListener("change", validation);
 mode.addEventListener("click", changeMode);
-let falsy = false;
+
 
 
 
