@@ -47,7 +47,7 @@ arrowLeft.addEventListener('mouseover', () => {
 });
 
 arrowRight.addEventListener('mouseover', () => {
-    arrowRight.src = './assets/button-Slider-right-hover.svg'
+    arrowRight.src = './assets/Button-Slider-right-hover.svg'
 });
 
 arrowLeft.addEventListener('mouseout', () => {
@@ -55,7 +55,7 @@ arrowLeft.addEventListener('mouseout', () => {
 });
 
 arrowRight.addEventListener('mouseout', () => {
-    arrowRight.src = './assets/button-Slider-right.svg'
+    arrowRight.src = './assets/Button-Slider-right.svg'
 });
 
 //Api Call
