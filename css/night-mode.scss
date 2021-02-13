@@ -621,7 +621,7 @@ top: 0;
 left: 0;
 display: flex;
 justify-content: center;
-background: $main-color-silver;	
+background: $background-dark-full;	
 }
 
 .maximizedContainer {
@@ -635,13 +635,16 @@ width: 24px;
 padding-bottom: 48px;	
 align-self: flex-end;
 cursor: pointer;
-background: url('../assets/close.svg') center no-repeat;
+background: url('../assets/close-modo-noct.svg') center no-repeat !important;
 }
 
 .gif-info {
 color: black;
 font-family: $font-montserrat;
 font-size: 14px;
+  p {
+    color: white;
+  }
 }
 
 
@@ -1175,11 +1178,3 @@ footer {
     }
     }
   }
-  
-
-
-
-
-
-  
-  
