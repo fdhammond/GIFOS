@@ -673,7 +673,7 @@ footer .footer .footer-rights {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background: #9CAFC3 !important;
+  background: #222326 !important;
 }
 
 .maximizedContainer {
@@ -695,13 +695,17 @@ footer .footer .footer-rights {
   -ms-flex-item-align: end;
       align-self: flex-end;
   cursor: pointer;
-  background: url("../assets/close.svg") center no-repeat;
+  background: url("../assets/close-modo-noct.svg") center no-repeat !important;
 }
 
 .gif-info {
   color: black;
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
+}
+
+.gif-info p {
+  color: white;
 }
 
 .gif-user {
