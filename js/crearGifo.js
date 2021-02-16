@@ -20,6 +20,9 @@ let myGifosArray = [];
 
 
 
+
+
+
 let recorder;
 
 let recording = false;
@@ -187,20 +190,18 @@ function uploadGif(gif) {
     console.log(res.status)
     if (res.status != 200 ) {
       uploadMessage.innerHTML = `<h3>Hubo un error subiendo tu Guifo</h3>`
-    } else {    
-      let myGifos = JSON.parse(localStorage.getItem('myGifoUrl'));
+    } else {                      
       console.log('GIFO SUBIDO')
       document.querySelector('#uploadingIcon').classList.add('hidden');
       document.querySelector('#uploadingGifo').classList.add('hidden');
       document.querySelector('#imageUploaded').classList.remove('hidden');
       document.querySelector('#exito').classList.remove('hidden');
-      document.querySelector('.container-preview').classList.remove('hidden');      
-      downloadMyGifo();      
+      document.querySelector('.container-preview').classList.remove('hidden');       
     }
     return res.json();  
   }).then(data => {  
     const gifId = data.data.id
-    getGifDetails(gifId);
+    getGifDetails(gifId);                        
   })
   .catch(error => {
     console.error('Error:', error)
@@ -236,7 +237,7 @@ function getGifDetails (id) {
         localStorage.setItem('myGifoUrl', JSON.stringify(arrayTemporal));   
         noFavoritesSection.classList.add('hidden');
         favoritesSection.classList.remove('hidden');
-        addMyGifosTemplate(newObjGif);
+        addMyGifosTemplate(newObjGif);        
   } 
 
 let myGifosObject = {
@@ -260,21 +261,22 @@ document.getElementById('finish').addEventListener('click', () => {
       })
 }
 
-let addMyGifosTemplate = (gif) => {
-  let template = `
-  <div class="general-container">
-      <img class="gif-image" onclick="maximizeGif('${gif.gif}')" src="${gif.images.media.url}">
+let addMyGifosTemplate = (gif) => { 
+    let template = `
+    <div class="general-container">
+        <img class="gif-image" onclick="maximizeGif('${gif.gif}')" src="${gif.images.media.url}">
+    
+        <div class="gif-buttons">
+            <div class="gif-buttons-icons">
+                <div class="button remove" onclick="removeGif('${gif.url}', event)" id="removeGif"></div>
+                <div class="button download" onclick="downloadGif('${gif.url}')"></div>
+                <div class="button maximize" onclick="maximizeGif('${gif.url}')"></div>
+            </div>
+        </div>
+        </div>
+    `;
+    document.querySelector('#misgifos-container').innerHTML += template;  
   
-      <div class="gif-buttons">
-          <div class="gif-buttons-icons">
-              <div class="button remove" onclick="removeGif('${gif.url}', event)" id="removeGif"></div>
-              <div class="button download" onclick="downloadGif('${gif.url}')"></div>
-              <div class="button maximize" onclick="maximizeGif('${gif.url}')"></div>
-          </div>
-      </div>
-      </div>
-  `;
-  document.querySelector('#misgifos-container').innerHTML += template;
 }
 
 
@@ -282,6 +284,7 @@ let addMyGifosTemplate = (gif) => {
 const addMyGifos = (gif, username, title, id) => {    
   let arrayTemporal = JSON.parse(localStorage.getItem('myGifoUrl'));
   let index = arrayTemporal.findIndex(e => e.id == id);
+  
  
   if (index == -1) {
       let newObjGif = {
@@ -325,8 +328,8 @@ const downloadGif = async (url) => {
 
 
 const downloadMyGifo = () => {
-  let myGifosLS = JSON.parse(localStorage.getItem('myGifoUrl'));
-
+  debugger;
+  let myGifosLS = JSON.parse(localStorage.getItem(url));    
   let myGifos = myGifosLS[myGifosLS.length - 1].url;    
       let template = `
       <div class="gif-buttons-icons-myGifos">                                          
@@ -338,6 +341,8 @@ const downloadMyGifo = () => {
       document.querySelector('.gifoMask').innerHTML += template;  
       document.querySelector('#downloadButton').addEventListener('click', downloadGif);
       document.querySelector('#shareButton').addEventListener('click', () => {
+    let myGifosLS = JSON.parse(localStorage.getItem(url));    
+    let myGifos = myGifosLS[myGifosLS.length - 1].url; 
     let urlCopy = document.createElement('input');  
     urlCopy.value = myGifos;    
     console.log(urlCopy.value)
