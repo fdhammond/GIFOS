@@ -496,3 +496,10 @@ const removeGif = (gif, event) => {
        }
     
     }
+
+ if (
+        JSON.parse(localStorage.getItem("myGifoUrl")) === null ||
+        JSON.parse(localStorage.getItem("myGifoUrl")) === undefined
+      ) {
+        localStorage.setItem("myGifoUrl", JSON.stringify([]));
+      }
