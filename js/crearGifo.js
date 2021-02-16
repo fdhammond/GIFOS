@@ -180,7 +180,7 @@ function getDuration() {
   }, 1000);
 } 
 
-function uploadGif(gif) {
+async function uploadGif(gif) {
   let api_key = "pdgPfpMIBejBL2VCIMm1u95FafUZoCMm";
 
   fetch('https://upload.giphy.com/v1/gifs' + '?api_key=' + api_key, {
@@ -196,12 +196,13 @@ function uploadGif(gif) {
       document.querySelector('#uploadingGifo').classList.add('hidden');
       document.querySelector('#imageUploaded').classList.remove('hidden');
       document.querySelector('#exito').classList.remove('hidden');
-      document.querySelector('.container-preview').classList.remove('hidden');       
+      document.querySelector('.container-preview').classList.remove('hidden');          
     }
     return res.json();  
   }).then(data => {  
     const gifId = data.data.id
-    getGifDetails(gifId);                        
+    getGifDetails(gifId);                             
+    downloadMyGifo(gifId);
   })
   .catch(error => {
     console.error('Error:', error)
@@ -216,7 +217,7 @@ function getGifDetails (id) {
       .then((response) => {
          return response.json()
       }).then(data => {
-
+    
     const gifUrl = data.data.images.original.url;
     const gifUser = data.data.username;
     let arrayTemporal = JSON.parse(localStorage.getItem('myGifoUrl'));
@@ -249,7 +250,6 @@ myGifosArray.push(myGifosObject);
 
 console.log(myGifosArray)
 localStorage.setItem('myGifoUrl', JSON.stringify(myGifosArray));
-
 
 document.getElementById('finish').addEventListener('click', () => {
   location.reload();
@@ -327,10 +327,9 @@ const downloadGif = async (url) => {
 
 
 
-const downloadMyGifo = () => {
-  debugger;
-  let myGifosLS = JSON.parse(localStorage.getItem(url));    
-  let myGifos = myGifosLS[myGifosLS.length - 1].url;    
+const downloadMyGifo = async (id) => {
+  await getGifDetails(id);
+    
       let template = `
       <div class="gif-buttons-icons-myGifos">                                          
       <div class="button download" id="downloadButton"></div>
@@ -341,7 +340,7 @@ const downloadMyGifo = () => {
       document.querySelector('.gifoMask').innerHTML += template;  
       document.querySelector('#downloadButton').addEventListener('click', downloadGif);
       document.querySelector('#shareButton').addEventListener('click', () => {
-    let myGifosLS = JSON.parse(localStorage.getItem(url));    
+    let myGifosLS = JSON.parse(localStorage.getItem('myGifoUrl'));      
     let myGifos = myGifosLS[myGifosLS.length - 1].url; 
     let urlCopy = document.createElement('input');  
     urlCopy.value = myGifos;    
@@ -355,7 +354,3 @@ const downloadMyGifo = () => {
 }
 
 });
-
-
-
-
