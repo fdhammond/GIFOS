@@ -5,6 +5,14 @@ urlRepositorio: https://github.com/fdhammond/GIFOS
 
 urlpagina: https://gifos-opal.vercel.app/
 
-Trabajo Numero 2 - Carrera - Fullstack Dev - Instituto Acamica - 2020 :collision: 
+Work Nº 2 - Fullstack Dev - Instituto Acamica - 2020 :collision: 
+
+:mag: Languages used: 
+:bulb: Javascript 
+:bulb: HTML 
+:bulb: CSS 
+:bulb: SASS 
+:rocket: Vercel App for HOST
+
 
 
