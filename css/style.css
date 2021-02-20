@@ -10,7 +10,7 @@
 /* Fonts */
 /* Variables */
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 /* Navigation */
@@ -172,7 +172,7 @@ section .main-image {
   margin-top: 24px;
 }
 
-section .main-image img  {
+section .main-image img  {
   max-width: 399px;
   height: 190px;
 }
@@ -341,7 +341,7 @@ section .sub-text-paragraph .trending-gifos-text .trending-tag::after {
   content: ',  ';
 }
 
-section .sub-text-paragraph .trending-gifos-text .trending-tag:last-child ::after  {
+section .sub-text-paragraph .trending-gifos-text .trending-tag:last-child ::after  {
   content: ' ';
 }
 
@@ -1196,7 +1196,7 @@ main .mis-gifos-button-more button {
           justify-content: center;
 }
 
-.container-timer .numbers #number {
+.container-timer .numbers .number {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1448,7 +1448,7 @@ main .mis-gifos-button-more button {
             align-items: center;
     margin-top: 24px;
   }
-  section .main-image img  {
+  section .main-image img  {
     max-width: 273px;
     height: 130px;
   }
@@ -1556,3 +1556,4 @@ main .mis-gifos-button-more button {
   }
 }
 /*# sourceMappingURL=style.css.map */
+

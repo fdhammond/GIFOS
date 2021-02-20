@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
         <link rel="stylesheet" href="css/style.css" id="mode-style">    
         <script src="https://kit.fontawesome.com/90cf718084.js" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="css/style.css" id="mode-style">
+        <link rel="stylesheet" href="css/style.css" class="mode-style">
     
         <title>GIFOS</title>
     </head>
@@ -27,7 +27,7 @@
         </nav>
         <div class="header__add">
             <a class="createGifoLink"><i id="icon" class="fas fa-plus"></i></a>
-            <i id="icon" class="fas fa-bars hidden"></i>
+            <i class="fas fa-bars hidden"></i>
         </div>
     </header>
 
@@ -50,14 +50,14 @@
             <h3 class="no-text">¡Animate a crear tu primer GIFO!</h3>
         </section>
 
-        <section id="favorites-section">
+        <div id="favorites-section">
             <div class="comenzar repetir-captura hidden"></div>
             <div class="image-search" id="search-result">
                 <div class="show-search-result favorites" id="misgifos-container">
     <!-- INYECTO EL ARRAY DEL LS -->
                 </div>
             </div>
-        </section>
+        </div>
 
     </section>
 
@@ -66,7 +66,7 @@
     </div>
 
 
-    <main>
+    <div>
         <div class="trending-gifos">
             <div class="trending-title">
                 <h2>Trending GIFOS</h2>
@@ -77,7 +77,7 @@
 
             <div class="trending-gallery">
                 <div class="arrow-container">
-                    <img src="./assets/button-slider-left.svg" class="arrow-left" id="arrow">
+                    <img src="./assets/button-slider-left.svg" class="arrow-left" alt="arrow">
 
                 </div>
                 <div class="image-container-general">
@@ -86,11 +86,11 @@
                     </div>
                 </div>
                 <div class="arrow-container">
-                    <img src="./assets/Button-Slider-right.svg" class="arrow-right" id="arrow">
+                    <img src="./assets/Button-Slider-right.svg" class="arrow-right" alt="arrow">
                 </div>
             </div>
-
-    </main>
+            </div>
+    </div>
 
     <footer>
         <div class="footer">            

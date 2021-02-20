@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
         <link rel="stylesheet" href="css/style.css" id="mode-style">    
         <script src="https://kit.fontawesome.com/90cf718084.js" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="css/style.css" id="mode-style">
+        <link rel="stylesheet" href="css/style.css" class="mode-style">
     
         <title>GIFOS</title>
     </head>
@@ -26,7 +26,7 @@
         </nav>
         <div class="header__add">
             <a class="createGifoLink"><i id="icon" class="fas fa-plus"></i></a>
-            <i id="icon" class="fas fa-bars hidden"></i>
+            <i class="fas fa-bars hidden"></i>
         </div>
     </header>
 
@@ -42,13 +42,14 @@
                 para que se muestre aquí!</h3>
         </section>
 
-        <section id="favorites-section">
+        <div id="favorites-section">
+            
             <div class="image-search" id="search-result">
                 <div class="show-search-result favorites" id="favorite-container">
     
                 </div>
             </div>
-        </section>
+        </div>
 
     </section>
 
@@ -69,7 +70,7 @@
 
             <div class="trending-gallery">
                 <div class="arrow-container">
-                    <img src="./assets/button-slider-left.svg" class="arrow-left" id="arrow">
+                    <img src="./assets/button-slider-left.svg" class="arrow-left" alt="arrow">
 
                 </div>
                 <div class="image-container-general">
@@ -78,10 +79,10 @@
                     </div>
                 </div>
                 <div class="arrow-container">
-                    <img src="./assets/Button-Slider-right.svg" class="arrow-right" id="arrow">
+                    <img src="./assets/Button-Slider-right.svg" class="arrow-right" alt="arrow">
                 </div>
             </div>
-
+        </div>
     </main>
 
     <footer>
@@ -103,7 +104,7 @@
                 <div class="border-line"></div>         
         </div>
     </footer>
-    </main>
+
     
     <script src="js/nav.js"></script>
     <script src="js/favorites.js"></script>

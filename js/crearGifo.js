@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
   let api_key = "pdgPfpMIBejBL2VCIMm1u95FafUZoCMm";
   const comenzar = document.querySelector(".comenzar");
   const grabar = document.querySelector(".grabar");
+  const finalizar = document.querySelector(".finalizar");
   const numberOne = document.querySelector(".number-one");
   const numberTwo = document.querySelector(".number-two");
   const numberThree = document.querySelector(".number-three");
@@ -49,10 +50,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
   comenzar.addEventListener("click", () => {
     getStreamAndRecord();
     comenzar.setAttribute("id", "hide");
-    grabar.removeAttribute("id", "hide");
+    grabar.classList.remove("hidden");
     numberOne.classList.remove("selected-number");
     numberTwo.classList.add("selected-number");
-    accessText.removeAttribute("id");
+    accessText.classList.remove("hidden");
     mainCreateText.setAttribute("id", "hide");
     console.log("TRIGGERED");
   });
@@ -124,15 +125,16 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     preview.classList.remove("hidden");
     video.classList.add("hidden");
-    record.setAttribute("id", "hide");
-    upload.removeAttribute("id", "hide");
-    timer.setAttribute("id", "hide");
-    restart.removeAttribute("id", "hide");
+    record.classList.add("hidden");
+    upload.classList.remove("hidden");    
+    timer.setAttribute("id", "hide");    
     numberTwo.classList.remove("selected-number");
     numberThree.classList.add("selected-number");
     document.querySelector(".container-preview").classList.remove("hidden");
     recorder.destroy();
     recorder = null;
+    restart.classList.remove("hidden");
+
   }
 
   restart.addEventListener("click", () => {
